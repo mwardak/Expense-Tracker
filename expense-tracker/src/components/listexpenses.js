@@ -1,12 +1,31 @@
-import React from 'react';
+import React from "react";
+
+// Create function to add expenses to table
 
 function ListExpenses() {
+
+
+
   return (
-    <div id="button">
-      <button>Add a new expense</button>
+    <div>
+      <button type="submit" id="add-expense-btn">
+        Add Expense
+      </button>
     </div>
+    
   );
 }
+
+
+const button = document.getElementById('add-expense-btn');
+
+
+button.addEventListener('click', function(e) {
+  console.log("button works"); {
+  
+}
+  
+});
 
 
 export default ListExpenses;

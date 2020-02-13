@@ -26,9 +26,6 @@ function Expense() {
         <span>Date:</span>
         <input type="date"></input>
       </div>
-
-      
-      
     </form>
   );
 }
