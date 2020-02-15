@@ -1,6 +1,10 @@
 import React from "react";
 
-function Expense() {
+//Form layout for expenses
+function Expense(props) {
+  props.handleSubmit();
+
+
   return (
     <form>
       <div>
@@ -10,7 +14,7 @@ function Expense() {
 
       <div>
         <span>Amount:</span>
-        <input type="text" placeholder="How much?"></input>
+        <input type="text" placeholder="How much did it cost?"></input>
       </div>
 
       <div>

@@ -5,14 +5,6 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-const button = document.getElementById('add-expense-btn');
-
-button.addEventListener('click', function(e) {
-  console.log("this works"); {
-  
-}
-  // how can we add a row in the table here?
-});
 
 
 // If you want your app to work offline and load faster, you can change
