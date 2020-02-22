@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListExpenses() {
+var ListExpenses = () => {
   return (
     <table>
       <div>

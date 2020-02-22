@@ -1,8 +1,8 @@
 import React from "react";
 
 //Form layout for expenses
-function Expense(props) {
-  props.handleSubmit();
+var Expense = () => {
+  
 
 
   return (

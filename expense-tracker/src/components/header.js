@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+var Header = () =>  {
   return (
     <div>
       <h1>Expense Tracker</h1>
