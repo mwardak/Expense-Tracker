@@ -1,36 +1,45 @@
 import React from "react";
 import Header from "./components/header";
-import Expense from "./components/expense";
-import ListExpenses from "./components/listexpenses";
+import ExpenseForm from "./components/expenseform";
+import ExpenseTable from "./components/expensetable";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-// function to add expenses to table
-// Create HTML table
-// function to handle user input. function below will have access to state
-//Change functions below to a Class
-// Add state to the class
+
+
+
+
+// Create class for App
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-// Create an empty array for expenses
+  constructor() {
+    super();
+    // Create an empty array for expenses
     this.state = {
-      expenses: [
-      {item:"",amount:"",type:"",date:""}
-      ]
+      expenses: [{
+       item: "",
+      amount: "", 
+      type: "",
+      date: ""
+     }]
     };
+  }
+
+// function to add expenses to table
+  addExpense = () =>{
 
   }
-// Function to add expenses
-var addExpense = () =>{
 
-}
+// function to handle user input. function below will have access to state
+  userInput = () =>{
+
+  }
+  
 
   render() {
     return (
       <div>
         <Header />
-        <Expense />
-        <ListExpenses />
+        <ExpenseForm addExpense={this.addExpense}/>
+        <ExpenseTable />
       </div>
     );
   }

@@ -1,10 +1,12 @@
 import React from "react";
 
+
 //Form layout for expenses
-var Expense = () => {
-  
+class ExpenseForm extends React.Component {
+  constructor(props) {
+    super(props);
 
-
+ 
   return (
     <form>
       <div>
@@ -32,6 +34,7 @@ var Expense = () => {
       </div>
     </form>
   );
+  }
 }
 
-export default Expense;
+export default ExpenseForm;
