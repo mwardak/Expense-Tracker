@@ -11,7 +11,7 @@ class ExpenseForm extends React.Component {
     <form>
       <div>
         <span>Item:</span>
-        <input type="text" placeholder="What did you buy today?"></input>
+        <input type="text"  onChange={(e) => this.props.setState(e.target.value)} placeholder="What did you buy today?"></input>
       </div>
 
       <div>

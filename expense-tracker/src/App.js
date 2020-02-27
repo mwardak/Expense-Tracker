@@ -23,15 +23,12 @@ class App extends React.Component {
     };
   }
 
-// function to add expenses to table
+// function to update state and send as props to expenseform
   addExpense = () =>{
-
+    this.setState{()}
   }
 
-// function to handle user input. function below will have access to state
-  userInput = () =>{
 
-  }
   
 
   render() {
