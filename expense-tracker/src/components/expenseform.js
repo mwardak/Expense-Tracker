@@ -5,13 +5,13 @@ import React from "react";
 class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);
-
- 
+  }
+    render() {
   return (
     <form>
       <div>
         <span>Item:</span>
-        <input type="text"  onChange={(e) => this.props.setState(e.target.value)} placeholder="What did you buy today?"></input>
+        <input type="text"  onChange={this.props.addExpense} placeholder="What did you buy today?"></input>
       </div>
 
       <div>
@@ -33,8 +33,8 @@ class ExpenseForm extends React.Component {
         <input type="date"></input>
       </div>
     </form>
-  );
-  }
+  ); 
+ }  
 }
 
 export default ExpenseForm;

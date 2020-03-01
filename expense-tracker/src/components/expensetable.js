@@ -6,13 +6,19 @@ class ExpenseTable extends React.Component {
     super(props);
 
     // Create HTML table for expenses to display as a list
+  }
+  render() {
     return (
       <table>
-        <div>
-          <button type="submit" onClick={this.props.addExpense}>
-            Add Expense
-          </button>
-        </div>
+        <tbody>
+          <tr>
+            <th>
+              <button type="submit" onClick={this.props.addExpense}>
+                Add Expense
+              </button>
+            </th>
+          </tr>
+        </tbody>
       </table>
     );
   }
