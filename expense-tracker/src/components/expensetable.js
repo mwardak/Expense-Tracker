@@ -13,8 +13,8 @@ class ExpenseTable extends React.Component {
         <tbody>
           <tr>
             <th>
-              <button type="submit" onClick={this.props.addExpense}>
-                Add Expense
+              <button type="submit" onClick={this.props.addExpense} >
+                Add Expense 
               </button>
             </th>
           </tr>

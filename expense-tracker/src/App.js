@@ -23,13 +23,21 @@ class App extends React.Component {
     };
   }
 
+  // this.updateItem = this.updateItem.bind(this)
+  // this.addExpense = this.addExpense.bind(this)
+
+
 updateItem = (e) =>{
-const newItem = e.target.value;
-console.log(newItem);
+this.setState({
+  [e.target.name]: e.target.value
+
+}) ;
+
 }
 
 // function to update state and send as props to expenseform
 addExpense = () =>{
+  
   
 //  Create a new expense object
 const expense = {
@@ -46,7 +54,7 @@ const expenseCopy = [...this.state.expenses]
 expenseCopy.push(expense);
 
 // setState to deep clone of expenses
-this.setState({expenses: expenseCopy});;
+this.setState({expenses: expenseCopy});
 
 
 };
@@ -57,8 +65,21 @@ this.setState({expenses: expenseCopy});;
     return (
       <div>
         <Header />
-        <ExpenseForm  addExpense={this.addExpense}  />
-        <ExpenseTable addExpense={this.addExpense} />
+        <ExpenseForm  
+        addExpense={this.addExpense}
+        updateItem={this.updateItem}
+         item={this.state.item}
+         amount={this.state.amount}
+         type={this.state.type}
+         date={this.state.date}
+           />
+        <ExpenseTable 
+        addExpense={this.addExpense}
+        updateItem={this.updateItem}
+         item={this.state.item}
+         amount={this.state.amount}
+         type={this.state.type}
+         date={this.state.date}  />
       </div>
     );
   }
