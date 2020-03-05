@@ -12,7 +12,7 @@ class ExpenseForm extends React.Component {
       <div>
         <span>Item:</span>
         <input type="text" name="item" onChange={this.props.updateItem} placeholder="What did you buy today?"></input>
-  
+        <h1> </h1>
       </div>
 
       <div>

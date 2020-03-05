@@ -10,13 +10,17 @@ class ExpenseTable extends React.Component {
   render() {
     return (
       <table>
-        <tbody>
+        <tbody> 
           <tr>
-            <th>
+            <th>Item</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Date</th>
+              <td type="submit" onClick={this.props.addExpense}>
               <button type="submit" onClick={this.props.addExpense} >
                 Add Expense 
               </button>
-            </th>
+              </td>
           </tr>
         </tbody>
       </table>

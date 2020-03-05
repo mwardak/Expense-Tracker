@@ -28,16 +28,14 @@ class App extends React.Component {
 
 
 updateItem = (e) =>{
-this.setState({
-  [e.target.name]: e.target.value
-
-}) ;
+ 
+  this.expenses = e.target.value;
 
 }
 
 // function to update state and send as props to expenseform
 addExpense = () =>{
-  
+ 
   
 //  Create a new expense object
 const expense = {
@@ -68,18 +66,12 @@ this.setState({expenses: expenseCopy});
         <ExpenseForm  
         addExpense={this.addExpense}
         updateItem={this.updateItem}
-         item={this.state.item}
-         amount={this.state.amount}
-         type={this.state.type}
-         date={this.state.date}
+        expenses={this.state.expenses}
            />
         <ExpenseTable 
         addExpense={this.addExpense}
         updateItem={this.updateItem}
-         item={this.state.item}
-         amount={this.state.amount}
-         type={this.state.type}
-         date={this.state.date}  />
+         expenses={this.state.expenses} />
       </div>
     );
   }
