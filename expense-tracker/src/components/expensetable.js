@@ -16,8 +16,8 @@ class ExpenseTable extends React.Component {
             <th>Amount</th>
             <th>Type</th>
             <th>Date</th>
-              <td type="submit" onClick={this.props.addExpense}>
-              <button type="submit" onClick={this.props.addExpense} >
+              <td type="submit" onSubmit={this.props.addExpense.bind(this)}>
+              <button type="submit" onClick={this.props.addExpense.bind(this)} >
                 Add Expense 
               </button>
               </td>
