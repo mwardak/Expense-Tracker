@@ -24,7 +24,7 @@ class App extends React.Component {
   updateItem = e => {
     console.log(e.target.value);
 
-    this.setState = { [e.target.name]: e.target.value };
+    this.setState({[e.target.name]: e.target.value });
   };
 
   // function to update state and send as props to expenseform
@@ -42,7 +42,7 @@ class App extends React.Component {
     // create deep clone of expenses
     // loop through expenses with map method along with a callback function
     // this will return a deep clon object from the array of expenses
-    const expenseCopy = this.state.expense.map(function(expense) {
+    const expenseCopy = this.state.expenses.map(function(expense) {
       // object is a static class and assign is a method
       return Object.assign({ expenseCopy }, expense);
     });
@@ -56,11 +56,12 @@ class App extends React.Component {
   };
 
   render() {
+    console.log(this.state.expenses);
     return (
       <div>
         <Header />
-        <ExpenseForm updateItem={this.updateItem.bind(this)} />
-        <ExpenseTable addExpense={this.addExpense.bind(this)} />
+        <ExpenseForm updateItem={this.updateItem} />
+        <ExpenseTable expenses={this.state.expenses} addExpense={this.addExpense} />
       </div>
     );
   }

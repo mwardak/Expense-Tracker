@@ -1,4 +1,5 @@
 import React from "react";
+import { Table, Container } from "react-bootstrap";
 
 // Add expenses to table
 class ExpenseTable extends React.Component {
@@ -9,21 +10,29 @@ class ExpenseTable extends React.Component {
   }
   render() {
     return (
-      <table>
-        <tbody> 
-          <tr>
-            <th>Item</th>
-            <th>Amount</th>
-            <th>Type</th>
-            <th>Date</th>
-              <td type="submit" onSubmit={this.props.addExpense.bind(this)}>
-              <button type="submit" onClick={this.props.addExpense.bind(this)} >
-                Add Expense 
-              </button>
+      <Container>
+        <table className="table-striped table bordered">
+          <thead className="thead-light">
+            <tr>
+              <th>Item</th>
+              <th>Amount</th>
+              <th>Type</th>
+              <th>Date</th>
+              <td>
+                <button type="submit" onClick={this.props.addExpense}>
+                  Add Expense
+                </button>
               </td>
-          </tr>
-        </tbody>
-      </table>
+            </tr>
+          </thead>
+          <tbody>
+            <tr expenses={this.props.expenses}></tr>
+            <tr data={this.props.expenses} ></tr>
+            <tr></tr>
+            <tr></tr>
+          </tbody>
+        </table>
+      </Container>
     );
   }
 }
