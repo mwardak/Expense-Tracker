@@ -5,13 +5,23 @@ import { Table, Container } from "react-bootstrap";
 class ExpenseTable extends React.Component {
   constructor(props) {
     super(props);
+    
+    // Create a table row for each loop
+    return this.props.expenses.map(function(tableRow){
+    // loop through each expense
+    console.log(tableRow);
+    
+    const rows = [];
+    });
+
+    rows.push(tableRow);
 
     // Create HTML table for expenses to display as a list
   }
   render() {
     return (
       <Container>
-        <table className="table-striped table bordered">
+        <Table className="table-striped table bordered">
           <thead className="thead-light">
             <tr>
               <th>Item</th>
@@ -19,19 +29,20 @@ class ExpenseTable extends React.Component {
               <th>Type</th>
               <th>Date</th>
               <td>
-                <button type="submit" onClick={this.props.addExpense}>
+                <button
+                  className=" btn btn-primary"
+                  type="button"
+                  onClick={this.props.addExpense}
+                >
                   Add Expense
                 </button>
               </td>
             </tr>
           </thead>
           <tbody>
-            <tr expenses={this.props.expenses}></tr>
-            <tr data={this.props.expenses} ></tr>
-            <tr></tr>
-            <tr></tr>
+            {rows}
           </tbody>
-        </table>
+        </Table>
       </Container>
     );
   }

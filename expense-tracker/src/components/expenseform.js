@@ -7,6 +7,7 @@ class ExpenseForm extends React.Component {
   }
 
   render() {
+    
     return (
       <form>
         <div>
@@ -15,7 +16,7 @@ class ExpenseForm extends React.Component {
             type="text"
             name="item"
             value={this.props.item}
-            onChange={this.props.updateItem.bind(this)}
+            onChange={this.props.updateItem}
             placeholder="What did you buy today?"
           ></input>
           <h1> </h1>
@@ -27,7 +28,7 @@ class ExpenseForm extends React.Component {
             type="text"
             name="amount"
             value={this.props.amount}
-            onChange={this.props.updateItem.bind(this)}
+            onChange={this.props.updateItem}
             placeholder="How much did it cost?"
           ></input>
         </div>
