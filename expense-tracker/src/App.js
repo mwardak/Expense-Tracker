@@ -34,6 +34,7 @@ class App extends React.Component {
       type: this.state.type,
       date: this.state.date
     };
+
     // update expenses in state to relfect the new expense
     // create deep clone of expenses
     // loop through expenses with map method along with a callback function
