@@ -9,7 +9,9 @@ class ExpenseTable extends React.Component {
     // Create HTML table for expenses to display as a list
   }
   render() {
+  
     // Create a table row for each loop
+   
     const rows = this.props.expenses.map(function(expense) {
       return (
         <tr>
@@ -18,6 +20,7 @@ class ExpenseTable extends React.Component {
           <td>{expense.type}</td>
           <td>{expense.date}</td>
         </tr>
+        
       );
     });
 

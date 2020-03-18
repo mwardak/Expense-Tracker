@@ -35,17 +35,17 @@ class ExpenseForm extends React.Component {
 
         <div>
           <span>Type:</span>
-          <select>
-            <option value={this.props.type} onChangeCapture={this.props.updateItem} >Debit Card</option>
-            <option value={this.props.type}>Credit Card</option>
-            <option value={this.props.type}>Cash</option>
+          <select name ="type" onChange={this.props.updateItem}>
+            <option value="Debit Card" >Debit Card</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Cash">Cash</option>
           </select>
         </div>
 
-        <div>
+        <di>
           <span>Date:</span>
-          <input type="date" value={this.props.date}></input>
-        </div>
+          <input type="date" name="date" value={this.props.date} onChange={this.props.updateItem}></input>
+        </di>
       </form>
     );
   }

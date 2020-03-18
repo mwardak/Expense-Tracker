@@ -21,7 +21,10 @@ class App extends React.Component {
   // this.updateItem = this.updateItem.bind(this)
   // this.addExpense = this.addExpense.bind(this)
 
+
   updateItem = e => {
+    console.log(e.target.name);
+    console.log(e.target.value);
     this.setState({ [e.target.name]: e.target.value });
   };
 
