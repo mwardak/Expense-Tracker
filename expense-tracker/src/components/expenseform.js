@@ -1,5 +1,6 @@
 import React from "react";
 
+
 //Form layout for expenses
 class ExpenseForm extends React.Component {
   constructor(props) {
@@ -19,7 +20,6 @@ class ExpenseForm extends React.Component {
             onChange={this.props.updateItem}
             placeholder="What did you buy today?"
           ></input>
-          <h1> </h1>
         </div>
 
         <div>

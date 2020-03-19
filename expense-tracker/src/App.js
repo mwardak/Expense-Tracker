@@ -12,19 +12,24 @@ class App extends React.Component {
     this.state = {
       item: "",
       amount: "",
-      type: "",
+      type: "Debit Card",
       date: "",
       expenses: []
+      // isChecked: true
     };
   }
 
-  // this.updateItem = this.updateItem.bind(this)
-  // this.addExpense = this.addExpense.bind(this)
+//  function to handle checkbox
 
+  // toggleCheckBox = () =>{
+  //   this.setState({
+  //     isChecked: !this.state.isChecked,
+  //   });
+
+  // };
 
   updateItem = e => {
-    console.log(e.target.name);
-    console.log(e.target.value);
+   
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -59,10 +64,15 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <ExpenseForm updateItem={this.updateItem} />
+        <ExpenseForm 
+        updateItem={this.updateItem}
+         />
         <ExpenseTable
           expenses={this.state.expenses}
           addExpense={this.addExpense}
+          // toggleCheckBox={this.toggleCheckBox}
+          // isChecked={this.state.isChecked}
+          
         />
       </div>
     );

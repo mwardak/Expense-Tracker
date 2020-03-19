@@ -1,6 +1,7 @@
 import React from "react";
 import { Table, Container } from "react-bootstrap";
 
+
 // Add expenses to table
 class ExpenseTable extends React.Component {
   constructor(props) {
@@ -9,24 +10,33 @@ class ExpenseTable extends React.Component {
     // Create HTML table for expenses to display as a list
   }
   render() {
-  
     // Create a table row for each loop
-   
+
     const rows = this.props.expenses.map(function(expense) {
       return (
-        <tr>
-          <td>{expense.item}</td>
-          <td>{expense.amount}</td>
-          <td>{expense.type}</td>
-          <td>{expense.date}</td>
-        </tr>
-        
+       
+          <tr>
+            {/* <td>
+              <input
+                type="checkbox"
+                name="isChecked"
+                checked={this.props.isChecked}
+                onChange={this.props.toggleCheckBox}
+              />
+            </td> */}
+
+            <td>{expense.item}</td>
+            <td >{expense.amount}</td>
+            <td>{expense.type}</td>
+            <td>{expense.date}</td>
+          </tr>
+      
       );
     });
 
     return (
       <Container>
-        <Table className="table-striped table bordered">
+        <Table className="table-striped table-bordered">
           <thead className="thead-light">
             <tr>
               <th>Item</th>
