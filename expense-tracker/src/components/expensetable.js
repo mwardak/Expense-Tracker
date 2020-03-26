@@ -12,18 +12,18 @@ class ExpenseTable extends React.Component {
   render() {
     // Create a table row for each loop
 
-    const rows = this.props.expenses.map(function(expense) {
+    const rows = this.props.expenses.map(expense => {
       return (
        
           <tr>
-            {/* <td>
+            <td>
               <input
                 type="checkbox"
                 name="isChecked"
-                checked={this.props.isChecked}
+                checked={expense.isChecked}
                 onChange={this.props.toggleCheckBox}
               />
-            </td> */}
+            </td>
 
             <td>{expense.item}</td>
             <td >{expense.amount}</td>

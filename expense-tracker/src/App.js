@@ -15,18 +15,25 @@ class App extends React.Component {
       type: "Debit Card",
       date: "",
       expenses: []
-      // isChecked: true
+      
     };
   }
 
 //  function to handle checkbox
+// search this.state.expenses for the item that was checked/unchecked
+// update item to reflect  new 'checked" state
+// setstate
 
-  // toggleCheckBox = () =>{
-  //   this.setState({
-  //     isChecked: !this.state.isChecked,
-  //   });
+  toggleCheckBox = () =>{
 
-  // };
+    const expenseCheck = this.state.expenses.map(function(checkExpense) {
+    
+      console.log("this is the value", );
+    
+    });
+  
+
+  };
 
   updateItem = e => {
    
@@ -40,7 +47,8 @@ class App extends React.Component {
       item: this.state.item,
       amount: this.state.amount,
       type: this.state.type,
-      date: this.state.date
+      date: this.state.date,
+      // isChecked: false
     };
 
     // update expenses in state to relfect the new expense
@@ -70,8 +78,8 @@ class App extends React.Component {
         <ExpenseTable
           expenses={this.state.expenses}
           addExpense={this.addExpense}
-          // toggleCheckBox={this.toggleCheckBox}
-          // isChecked={this.state.isChecked}
+          toggleCheckBox={this.toggleCheckBox}
+          
           
         />
       </div>
