@@ -21,7 +21,10 @@ class ExpenseTable extends React.Component {
                 type="checkbox"
                 name="isChecked"
                 checked={expense.isChecked}
-                onChange={this.props.toggleCheckBox}
+                onChange={(e) => {
+                  console.log('helo world!');
+                  this.props.toggleCheckBox(e, expense.id);
+                }}
               />
             </td>
 

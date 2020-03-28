@@ -42,10 +42,10 @@ class ExpenseForm extends React.Component {
           </select>
         </div>
 
-        <di>
+        <div>
           <span>Date:</span>
           <input type="date" name="date" value={this.props.date} onChange={this.props.updateItem}></input>
-        </di>
+        </div>
       </form>
     );
   }

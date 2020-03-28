@@ -24,16 +24,16 @@ class App extends React.Component {
 // update item to reflect  new 'checked" state
 // setstate
 
-  toggleCheckBox = () =>{
+toggleCheckBox = (e, id) => {
+  console.log(e.target.checked);
+  // create a copy of expenses
+  const expensesCopy = this.state.expenses.map(expense => Object.assign({}, expense));
+  // find item in copy of expenses based on id
+  // modify the isChecked property
+  // save the copy of expenses to state
+  this.setState({expenses: expensesCopy});
+};
 
-    const expenseCheck = this.state.expenses.map(function(checkExpense) {
-    
-      console.log("this is the value", );
-    
-    });
-  
-
-  };
 
   updateItem = e => {
    
@@ -48,7 +48,7 @@ class App extends React.Component {
       amount: this.state.amount,
       type: this.state.type,
       date: this.state.date,
-      // isChecked: false
+      isChecked: false
     };
 
     // update expenses in state to relfect the new expense
