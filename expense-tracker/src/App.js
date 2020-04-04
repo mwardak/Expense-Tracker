@@ -26,12 +26,22 @@ class App extends React.Component {
 
 toggleCheckBox = (e, id) => {
   console.log(e.target.checked);
+  console.log('id: ', id);
+  
   // create a copy of expenses
-  const expensesCopy = this.state.expenses.map(expense => Object.assign({}, expense));
+  const expensesCopy = this.state.expenses.map(expense =>
+    Object.assign({}, expense)
+    
+  );
   // find item in copy of expenses based on id
+  const expense = expensesCopy.find(function(currentValue) {
+    return currentValue.id === id;
+  });
+  const expenseIndex = expensesCopy.indexOf(expense);
   // modify the isChecked property
+  expensesCopy[expenseIndex].isChecked = e.target.checked;
   // save the copy of expenses to state
-  this.setState({expenses: expensesCopy});
+  this.setState({ expenses: expensesCopy });
 };
 
 
@@ -44,6 +54,7 @@ toggleCheckBox = (e, id) => {
   addExpense = () => {
     //  Create a new expense object
     const expense = {
+      key: new Date().getTime(),
       item: this.state.item,
       amount: this.state.amount,
       type: this.state.type,
