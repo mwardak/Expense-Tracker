@@ -50,11 +50,19 @@ toggleCheckBox = (e, id) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+   // create button to delete expenses in Expensetable
+    // add onchange event to button
+    // map through expenses to see if isChecked is true 
+    // if ischecked is true and button is clicked it should remove expnese
+    deleteExpense = () => {
+
+    };
+
   // function to update state and send as props to expenseform
   addExpense = () => {
     //  Create a new expense object
     const expense = {
-      key: new Date().getTime(),
+      id: new Date().getTime(),
       item: this.state.item,
       amount: this.state.amount,
       type: this.state.type,

@@ -11,7 +11,7 @@ class ExpenseForm extends React.Component {
     
     return (
       <form>
-        <div>
+        <div style={{ color: "black", fontWeight: "bold" }} >
           <span>Item:</span>
           <input
             type="text"
@@ -22,7 +22,7 @@ class ExpenseForm extends React.Component {
           ></input>
         </div>
 
-        <div>
+        <div style={{ color: "black", fontWeight: "bold" }}>
           <span>Amount:</span>
           <input
             type="text"
@@ -33,7 +33,7 @@ class ExpenseForm extends React.Component {
           ></input>
         </div>
 
-        <div>
+        <div style={{ color: "black", fontWeight: "bold" }}>
           <span>Type:</span>
           <select name ="type" onChange={this.props.updateItem}>
             <option value="Debit Card" >Debit Card</option>
@@ -42,7 +42,7 @@ class ExpenseForm extends React.Component {
           </select>
         </div>
 
-        <div>
+        <div style={{ color: "black", fontWeight: "bold" }} >
           <span>Date:</span>
           <input type="date" name="date" value={this.props.date} onChange={this.props.updateItem}></input>
         </div>

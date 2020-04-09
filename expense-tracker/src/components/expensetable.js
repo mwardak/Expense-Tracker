@@ -40,24 +40,36 @@ class ExpenseTable extends React.Component {
       <Container>
         <Table className="table-striped table-bordered">
           <thead className="thead-light">
-            <tr>
-              <th>Item</th>
-              <th>Amount</th>
-              <th>Type</th>
-              <th>Date</th>
-              <td>
-                <button
+            
+            <button
                   className=" btn btn-primary"
                   type="button"
                   onClick={this.props.addExpense}
                 >
                   Add Expense
                 </button>
+
+            
+            
+            <tr>
+              <th></th>
+              <th>Item</th>
+              <th>Amount</th>
+              <th>Type</th>
+              <th>Date</th>
+              <td>
               </td>
             </tr>
           </thead>
           <tbody>{rows}</tbody>
         </Table>
+        <button
+                  className=" btn btn-primary"
+                  type="button"
+                  onClick={this.props.deleteExpense}
+                >
+                  Delete Expense
+            </button>
       </Container>
     );
   }
