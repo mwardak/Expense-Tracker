@@ -18,14 +18,12 @@ class App extends React.Component {
     };
   }
 
-  //  function to handle checkbox
+  // function to handle checkbox
   // search this.state.expenses for the item that was checked/unchecked
   // update item to reflect  new 'checked" state
   // setstate
 
   toggleCheckBox = (e, id) => {
-    console.log(e.target.checked);
-    console.log("id: ", id);
 
     // create a copy of expenses
     const expensesCopy = this.state.expenses.map((expense) =>
@@ -50,18 +48,18 @@ class App extends React.Component {
   // add onchange event to button
   // create a new arrary of expenses use the .filter merthod
   // use the filter function to  filter out expenses that ischecked === true
-  // if ischecked is true and button is clicked it should remove expense
+ // if ischecked is true and button is clicked it should remove expense
   deleteExpense = () => {
-    const expensesCopy = this.state.expenses.map((expense) =>
-    Object.assign({}, expense)
-  );
+      const expensesCopy = this.state.expenses.map((expense) =>
+      Object.assign({}, expense)
+    );
 
-  const expense = expensesCopy.filter(function (currentValue) {
-    return currentvalue === isChecked && isChecked === true;
+    const expense = expensesCopy.filter(function (currentValue) {
+      return currentValue.isChecked === true;
+   
 
-
-  });
-
+    });
+  };
   // function to update state and send as props to expenseform
   addExpense = () => {
     //  Create a new expense object
@@ -77,6 +75,7 @@ class App extends React.Component {
     // update expenses in state to relfect the new expense
     // create deep clone of expenses
     // loop through expenses with map method along with a callback function
+
     // this will return a deep clon object from the array of expenses
     const expenseCopy = this.state.expenses.map(function (expense) {
       // object is a static class and assign is a method
