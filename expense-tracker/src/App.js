@@ -24,8 +24,7 @@ class App extends React.Component {
   // setstate
 
   toggleCheckBox = (e, id) => {
-
-    // create a copy of expenses
+    // create a copy of expenses by mapping through expenses in state
     const expensesCopy = this.state.expenses.map((expense) =>
       Object.assign({}, expense)
     );
@@ -46,19 +45,20 @@ class App extends React.Component {
 
   // create button to delete expenses in Expensetable
   // add onchange event to button
-  // create a new arrary of expenses use the .filter merthod
-  // use the filter function to  filter out expenses that ischecked === true
- // if ischecked is true and button is clicked it should remove expense
+
   deleteExpense = () => {
-      const expensesCopy = this.state.expenses.map((expense) =>
+    const expensesCopy = this.state.expenses.map((expense) =>
       Object.assign({}, expense)
     );
-
-    const expense = expensesCopy.filter(function (currentValue) {
-      return currentValue.isChecked === true;
-   
-
+    // create a new arrary of expenses use the .filter merthod
+    // use the filter function to  filter out expenses that ischecked === true
+    // if ischecked is true and button is clicked it should remove expense
+    const expenseNotToDelete = expensesCopy.filter(function (currentValue) {
+      // where any expense "isChecked" property !== true
+      return currentValue.isChecked !== true;
+      
     });
+    console.log(expenseNotToDelete);
   };
   // function to update state and send as props to expenseform
   addExpense = () => {
@@ -72,11 +72,9 @@ class App extends React.Component {
       isChecked: false,
     };
 
-    // update expenses in state to relfect the new expense
-    // create deep clone of expenses
     // loop through expenses with map method along with a callback function
 
-    // this will return a deep clon object from the array of expenses
+    // this will return a deep clone object from the array of expenses
     const expenseCopy = this.state.expenses.map(function (expense) {
       // object is a static class and assign is a method
       return Object.assign({}, expense);
@@ -86,7 +84,7 @@ class App extends React.Component {
     // // add new expense to deep clone
     expenseCopy.push(expense);
 
-    // // setState to deep clone of expenses
+    // // setState to deep clone of expenses. update expenses in state to relfect the new expense
     this.setState({ expenses: expenseCopy });
   };
 
@@ -99,6 +97,7 @@ class App extends React.Component {
           expenses={this.state.expenses}
           addExpense={this.addExpense}
           toggleCheckBox={this.toggleCheckBox}
+          deleteExpense={this.deleteExpense}
         />
       </div>
     );
