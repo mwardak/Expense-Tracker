@@ -36,7 +36,7 @@ class ExpenseTable extends React.Component {
     return (
       <Container>
         <Table className="table-striped table-bordered">
-          <thead className="thead-light">
+          <thead className="thead-dark">
             <button
               className=" btn btn-primary"
               type="button"

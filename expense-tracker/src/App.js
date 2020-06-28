@@ -50,19 +50,22 @@ class App extends React.Component {
     const expensesCopy = this.state.expenses.map((expense) =>
       Object.assign({}, expense)
     );
-    // create a new arrary of expenses use the .filter merthod
-    // use the filter function to  filter out expenses that ischecked === true
-    // if ischecked is true and button is clicked it should remove expense
+    // create a new arrary of expenses use the .filter method
+    // use the filter function to  filter out expenses that ischecked !== true
+
     const expenseNotToDelete = expensesCopy.filter(function (currentValue) {
       // where any expense "isChecked" property !== true
       return currentValue.isChecked !== true;
+
       
     });
-    console.log(expenseNotToDelete);
+    this.setState({expenses: expenseNotToDelete})
+
+   
   };
   // function to update state and send as props to expenseform
   addExpense = () => {
-    //  Create a new expense object
+    //  Create a new expense object. this is pulling the data from the expense form. this is needed before the .map function can loop through expenses 
     const expense = {
       id: new Date().getTime(),
       item: this.state.item,

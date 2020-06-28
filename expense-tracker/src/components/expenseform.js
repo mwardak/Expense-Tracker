@@ -10,8 +10,8 @@ class ExpenseForm extends React.Component {
   render() {
     
     return (
-      <form>
-        <div style={{ color: "black", fontWeight: "bold" }} >
+      <form className="col d-flex justify-content-center"> 
+        <div style={{ color: "black", fontWeight: "bold" }}>
           <span>Item:</span>
           <input
             type="text"
