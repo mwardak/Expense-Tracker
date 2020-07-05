@@ -6,8 +6,8 @@ class Header extends React.Component {
   }
     render() {
     return (
-      <div>
-        <h1 className="col-3 mx-auto">Expense Tracker</h1>
+      <div className="shadow p-3 mb-5 bg-white rounded">
+        <h1 className="text-center text-info">Expense Tracker</h1>
       </div>
     );
     }

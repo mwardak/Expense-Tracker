@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 class App extends React.Component {
   constructor() {
     super();
-    // Create an empty array to push expenses
+    // Create an empty array to push expenses 
     this.state = {
       item: "",
       amount: "",
@@ -93,7 +93,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container" >
         <Header />
         <ExpenseForm updateItem={this.updateItem} />
         <ExpenseTable
