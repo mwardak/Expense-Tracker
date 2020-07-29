@@ -65,6 +65,7 @@ class App extends React.Component {
   };
   // function to update state and send as props to expenseform
   addExpense = () => {
+  
     //  Create a new expense object. this is pulling the data from the expense form. this is needed before the .map function can loop through expenses 
     const expense = {
       id: new Date().getTime(),
