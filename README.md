@@ -24,6 +24,6 @@ This is my first REACT app and. I found it challenging at first but through lear
 
 
 
-![picture](JS logo.PNG)
+![picture](REACTLOGO.PNG)![picture](JSlogo.PNG)![picture](heroku-logo.PNG)
 
 <br>
