@@ -9,7 +9,7 @@ To view the App, click here --> https://expense-tracker-maher.herokuapp.com/
 
 <br>
 
-<image src = "expense-tracker-image.png" >
+<image src = "expense-tracker-image.png" width="1000" height="350" >
 
 
 <br>
