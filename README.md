@@ -9,7 +9,7 @@ To view the App, click here --> https://expense-tracker-maher.herokuapp.com/
 
 <br>
 
-![picture]
+<image src = "expense-tracker-image.png" >
 
 
 
@@ -24,9 +24,13 @@ To view the App, click here --> https://expense-tracker-maher.herokuapp.com/
 
 
 <div>
-<span><image src = "REACT LOGO.png"></span>
-<span><image src = "JS logo.png"></span>
-<span><image src = "heroku-logo.png"></span>
-<span><image src = "bootstrap-logo.png"></span>
+<image src = "bootstrap-logo.png" width="200" height="100" align ="centre">
+<image src = "JS logo.png" width="100" height="100">
+
+<image src = "heroku-logo.png" width="100" height="100">
+<image src = "REACT LOGO.png" width="100" height="100" align ="left">
+
+
+
 </div>
 <br>
