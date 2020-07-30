@@ -12,8 +12,6 @@ To view the App, click here --> https://expense-tracker-maher.herokuapp.com/
 <image src = "expense-tracker-image.png" >
 
 
-
-
 <br>
 
 ## Summary
