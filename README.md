@@ -1,6 +1,6 @@
 # Expense Tracker (REACT)
 
-An application to track expenses using REACT & Bootstrap
+An application to track expenses built with REACT & Bootstrap
 
 
 <br>
