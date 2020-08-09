@@ -1,16 +1,11 @@
 import React from "react";
 import { Table, Container } from "react-bootstrap";
 
-// Add expenses to table
 class ExpenseTable extends React.Component {
   constructor(props) {
     super(props);
-
-    // Create HTML table for expenses to display as a list
   }
   render() {
-    // Create a table row for each loop
-
     const rows = this.props.expenses.map((expense) => {
       return (
         <tr>
@@ -51,7 +46,6 @@ class ExpenseTable extends React.Component {
               <th>Amount</th>
               <th>Type</th>
               <th>Date</th>
-              
             </tr>
           </thead>
           <tbody>{rows}</tbody>

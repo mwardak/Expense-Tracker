@@ -1,6 +1,6 @@
 import React from "react";
 
-//Form layout for expenses
+
 class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);

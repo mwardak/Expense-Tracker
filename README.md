@@ -27,8 +27,13 @@ To view the App, click here --> https://expense-tracker-maher.herokuapp.com/
 
 <image src ="heroku-logo.png" width="100" height="100">
 <image src ="REACT LOGO.png" width="100" height="100" align ="left">
-
-
-
 </div>
 <br>
+
+
+
+## Author
+
+<ul>
+<li><strong>Maher Wardak</strong> - <em>Full-Stack Software Developer</em></li>
+</ul>
