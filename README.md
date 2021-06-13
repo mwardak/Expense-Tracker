@@ -35,5 +35,5 @@ To view the App, click here --> https://expense-tracker-maher.herokuapp.com/
 ## Author
 
 <ul>
-<li><strong>Maher Wardak</strong> - <em>Full-Stack Software Developer</em></li>
+<li><strong>Maher Wardak</strong> - <em>Full-Stack Software Developer</em> - <a href="https://www.linkedin.com/in/maherwardak/" rel="nofollow">LinkedIn</a></li>
 </ul>

@@ -47,8 +47,9 @@ class App extends React.Component {
     this.setState({ expenses: expenseNotToDelete });
   };
 
-  addExpense = () => {
+  addExpense = (e) => {
 
+    e.preventDefault();
     const expense = {
       id: new Date().getTime(),
       item: this.state.item,

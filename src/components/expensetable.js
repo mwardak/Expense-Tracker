@@ -21,7 +21,7 @@ class ExpenseTable extends React.Component {
           </td>
 
           <td>{expense.item}</td>
-          <td>{expense.amount}</td>
+          <td>${expense.amount}</td>
           <td>{expense.type}</td>
           <td>{expense.date}</td>
         </tr>
@@ -35,8 +35,8 @@ class ExpenseTable extends React.Component {
             <button
               className=" btn btn-primary"
               type="button"
-              onClick={this.props.addExpense}
-            >
+              
+              onClick={(e) => {this.props.addExpense(e)}}>
               Add Expense
             </button>
 
